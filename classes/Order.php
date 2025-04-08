@@ -219,4 +219,148 @@ class Order {
         
         return $this->db->resultSet();
     }
+    public function getRecentApprovedOrders($limit = 5) {
+        $this->db->query('SELECT o.*, 
+                            c.company_name, 
+                            l.name as location_name, 
+                            CONCAT(u.first_name, " ", u.last_name) as user_name
+                          FROM orders o
+                          JOIN clients c ON o.client_id = c.id
+                          JOIN locations l ON o.location_id = l.id
+                          JOIN users u ON o.user_id = u.id
+                          WHERE o.status = "approved"
+                          ORDER BY o.approval_date DESC
+                          LIMIT :limit');
+        
+        $this->db->bind(':limit', $limit);
+        
+        return $this->db->resultSet();
+    }
+
+    public function getFilteredOrders($client_id = 0, $status = '', $date_from = '', $date_to = '', $search = '', $limit = 10, $offset = 0) {
+        $sql = 'SELECT o.*, 
+                  c.company_name, 
+                  l.name as location_name, 
+                  CONCAT(u.first_name, " ", u.last_name) as user_name
+                FROM orders o
+                JOIN clients c ON o.client_id = c.id
+                JOIN locations l ON o.location_id = l.id
+                JOIN users u ON o.user_id = u.id
+                WHERE 1=1';
+        
+        // Adaugă condiții de filtrare
+        if ($client_id > 0) {
+            $sql .= ' AND o.client_id = :client_id';
+        }
+        
+        if (!empty($status)) {
+            $sql .= ' AND o.status = :status';
+        }
+        
+        if (!empty($date_from)) {
+            $sql .= ' AND DATE(o.order_date) >= :date_from';
+        }
+        
+        if (!empty($date_to)) {
+            $sql .= ' AND DATE(o.order_date) <= :date_to';
+        }
+        
+        if (!empty($search)) {
+            $sql .= ' AND (o.order_number LIKE :search OR c.company_name LIKE :search)';
+        }
+        
+        $sql .= ' ORDER BY o.order_date DESC LIMIT :limit OFFSET :offset';
+        
+        $this->db->query($sql);
+        
+        // Legare parametri
+        if ($client_id > 0) {
+            $this->db->bind(':client_id', $client_id);
+        }
+        
+        if (!empty($status)) {
+            $this->db->bind(':status', $status);
+        }
+        
+        if (!empty($date_from)) {
+            $this->db->bind(':date_from', $date_from);
+        }
+        
+        if (!empty($date_to)) {
+            $this->db->bind(':date_to', $date_to);
+        }
+        
+        if (!empty($search)) {
+            $this->db->bind(':search', '%' . $search . '%');
+        }
+        
+        $this->db->bind(':limit', $limit, PDO::PARAM_INT);
+        $this->db->bind(':offset', $offset, PDO::PARAM_INT);
+        
+        return $this->db->resultSet();
+    }
+    
+    // Numără comenzile filtrate
+    public function countFilteredOrders($client_id = 0, $status = '', $date_from = '', $date_to = '', $search = '') {
+        $sql = 'SELECT COUNT(*) as count 
+                FROM orders o
+                JOIN clients c ON o.client_id = c.id
+                WHERE 1=1';
+        
+        // Adaugă condiții de filtrare
+        if ($client_id > 0) {
+            $sql .= ' AND o.client_id = :client_id';
+        }
+        
+        if (!empty($status)) {
+            $sql .= ' AND o.status = :status';
+        }
+        
+        if (!empty($date_from)) {
+            $sql .= ' AND DATE(o.order_date) >= :date_from';
+        }
+        
+        if (!empty($date_to)) {
+            $sql .= ' AND DATE(o.order_date) <= :date_to';
+        }
+        
+        if (!empty($search)) {
+            $sql .= ' AND (o.order_number LIKE :search OR c.company_name LIKE :search)';
+        }
+        
+        $this->db->query($sql);
+        
+        // Legare parametri
+        if ($client_id > 0) {
+            $this->db->bind(':client_id', $client_id);
+        }
+        
+        if (!empty($status)) {
+            $this->db->bind(':status', $status);
+        }
+        
+        if (!empty($date_from)) {
+            $this->db->bind(':date_from', $date_from);
+        }
+        
+        if (!empty($date_to)) {
+            $this->db->bind(':date_to', $date_to);
+        }
+        
+        if (!empty($search)) {
+            $this->db->bind(':search', '%' . $search . '%');
+        }
+        
+        $result = $this->db->single();
+        return $result['count'];
+    }
+    
+    // Numără comenzile după status
+    public function countOrdersByStatus($status) {
+        $this->db->query('SELECT COUNT(*) as count FROM orders WHERE status = :status');
+        $this->db->bind(':status', $status);
+        
+        $result = $this->db->single();
+        return $result['count'];
+    }
 }
