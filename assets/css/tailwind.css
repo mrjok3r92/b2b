@@ -1,0 +1,9 @@
+/* assets/css/tailwind.css */
+/* 
+  Acest fișier este folosit pentru injectarea stilurilor Tailwind.
+  În producție, se va genera CSS-ul optimizat utilizând PostCSS și purgecss.
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

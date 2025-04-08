@@ -1,0 +1,10 @@
+[07-Apr-2025 16:32:58 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Class "Database" not found in /home/cuewydxh/strauss.symdata.ro/classes/DeliveryNote.php:9
+Stack trace:
+#0 /home/cuewydxh/strauss.symdata.ro/client/delivery-notes/index.php(14): DeliveryNote->__construct()
+#1 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/classes/DeliveryNote.php on line 9
+[07-Apr-2025 16:40:15 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Class "Database" not found in /home/cuewydxh/strauss.symdata.ro/classes/DeliveryNote.php:9
+Stack trace:
+#0 /home/cuewydxh/strauss.symdata.ro/client/delivery-notes/index.php(14): DeliveryNote->__construct()
+#1 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/classes/DeliveryNote.php on line 9

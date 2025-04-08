@@ -1,0 +1,10 @@
+[07-Apr-2025 16:28:00 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Class "Database" not found in /home/cuewydxh/strauss.symdata.ro/classes/Client.php:9
+Stack trace:
+#0 /home/cuewydxh/strauss.symdata.ro/client/locations/index.php(13): Client->__construct()
+#1 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/classes/Client.php on line 9
+[07-Apr-2025 16:28:04 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Class "Database" not found in /home/cuewydxh/strauss.symdata.ro/classes/Client.php:9
+Stack trace:
+#0 /home/cuewydxh/strauss.symdata.ro/client/locations/index.php(13): Client->__construct()
+#1 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/classes/Client.php on line 9

@@ -1,0 +1,2 @@
+<?php
+// generate.php

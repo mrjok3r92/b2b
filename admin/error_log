@@ -1,0 +1,12 @@
+[08-Apr-2025 09:46:32 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method Order::getRecentApprovedOrders() in /home/cuewydxh/strauss.symdata.ro/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/admin/index.php on line 32
+[08-Apr-2025 09:57:56 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method Order::getRecentApprovedOrders() in /home/cuewydxh/strauss.symdata.ro/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/admin/index.php on line 32
+[08-Apr-2025 09:58:05 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method Order::getRecentApprovedOrders() in /home/cuewydxh/strauss.symdata.ro/admin/index.php:32
+Stack trace:
+#0 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/admin/index.php on line 32

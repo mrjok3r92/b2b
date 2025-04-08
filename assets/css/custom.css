@@ -1,0 +1,267 @@
+/* assets/css/custom.css */
+/* Stiluri personalizate pentru aplicație */
+
+/* Stiluri generale */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Stiluri pentru formulare */
+.form-input {
+    @apply appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 
+           focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm;
+}
+
+.form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+}
+
+.form-checkbox {
+    @apply h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded;
+}
+
+.form-radio {
+    @apply h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300;
+}
+
+.form-submit {
+    @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium 
+           text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+}
+
+.form-cancel {
+    @apply w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium 
+           text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+}
+
+/* Butoane */
+.btn {
+    @apply inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium 
+           focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+    @apply text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-500;
+}
+
+.btn-secondary {
+    @apply text-blue-700 bg-blue-100 hover:bg-blue-200 focus:ring-blue-500;
+}
+
+.btn-success {
+    @apply text-white bg-green-600 hover:bg-green-700 focus:ring-green-500;
+}
+
+.btn-danger {
+    @apply text-white bg-red-600 hover:bg-red-700 focus:ring-red-500;
+}
+
+.btn-warning {
+    @apply text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-yellow-500;
+}
+
+.btn-info {
+    @apply text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500;
+}
+
+.btn-light {
+    @apply text-gray-700 bg-gray-100 hover:bg-gray-200 focus:ring-gray-500;
+}
+
+.btn-sm {
+    @apply px-2 py-1 text-xs;
+}
+
+.btn-lg {
+    @apply px-6 py-3 text-base;
+}
+
+/* Carduri */
+.card {
+    @apply bg-white overflow-hidden shadow-md rounded-lg;
+}
+
+.card-header {
+    @apply px-4 py-5 sm:px-6 border-b border-gray-200;
+}
+
+.card-body {
+    @apply px-4 py-5 sm:p-6;
+}
+
+.card-footer {
+    @apply px-4 py-4 sm:px-6 border-t border-gray-200;
+}
+
+/* Tabele */
+.table {
+    @apply min-w-full divide-y divide-gray-200;
+}
+
+.table-header {
+    @apply bg-gray-50;
+}
+
+.table-header th {
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.table-body {
+    @apply bg-white divide-y divide-gray-200;
+}
+
+.table-body td {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-500;
+}
+
+.table-striped tr:nth-child(even) {
+    @apply bg-gray-50;
+}
+
+.table-hover tr:hover {
+    @apply bg-gray-100;
+}
+
+/* Badges */
+.badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-success {
+    @apply bg-green-100 text-green-800;
+}
+
+.badge-danger {
+    @apply bg-red-100 text-red-800;
+}
+
+.badge-warning {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-info {
+    @apply bg-blue-100 text-blue-800;
+}
+
+.badge-pending {
+    @apply bg-gray-100 text-gray-800;
+}
+
+/* Alerte */
+.alert {
+    @apply rounded-md p-4 mb-4;
+}
+
+.alert-info {
+    @apply bg-blue-50 text-blue-700;
+}
+
+.alert-success {
+    @apply bg-green-50 text-green-700;
+}
+
+.alert-warning {
+    @apply bg-yellow-50 text-yellow-700;
+}
+
+.alert-danger {
+    @apply bg-red-50 text-red-700;
+}
+
+/* Paginare */
+.pagination {
+    @apply flex justify-center mt-4;
+}
+
+.pagination-item {
+    @apply relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700;
+}
+
+.pagination-item-active {
+    @apply z-10 bg-blue-50 border-blue-500 text-blue-600;
+}
+
+.pagination-item:hover {
+    @apply bg-gray-50;
+}
+
+.pagination-item-disabled {
+    @apply bg-gray-100 text-gray-400 cursor-not-allowed;
+}
+
+/* Stiluri pentru coșul de cumpărături */
+.cart-item {
+    @apply flex items-center py-4 border-b border-gray-200 last:border-b-0;
+}
+
+.cart-item-image {
+    @apply w-16 h-16 flex-shrink-0 rounded-md bg-gray-200 object-cover;
+}
+
+.cart-item-details {
+    @apply ml-4 flex-1;
+}
+
+.cart-item-actions {
+    @apply flex items-center space-x-2;
+}
+
+.cart-quantity-input {
+    @apply w-16 text-center border border-gray-300 rounded-md shadow-sm 
+           focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm;
+}
+
+/* Autocomplete */
+.autocomplete-container {
+    @apply relative;
+}
+
+.autocomplete-results {
+    @apply absolute z-10 mt-1 w-full bg-white shadow-lg rounded-md py-1 text-base overflow-auto focus:outline-none sm:text-sm;
+}
+
+.autocomplete-result {
+    @apply cursor-default select-none relative py-2 pl-3 pr-9 hover:bg-gray-100;
+}
+
+.autocomplete-result-active {
+    @apply bg-blue-100;
+}
+
+/* Animații */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-down {
+    animation: slideDown 0.3s ease-in-out;
+}
+
+/* Responsive utilities */
+.mobile-only {
+    @apply sm:hidden;
+}
+
+.desktop-only {
+    @apply hidden sm:block;
+}

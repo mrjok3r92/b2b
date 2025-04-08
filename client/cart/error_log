@@ -1,0 +1,5 @@
+[07-Apr-2025 16:22:19 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Class "Database" not found in /home/cuewydxh/strauss.symdata.ro/classes/Product.php:9
+Stack trace:
+#0 /home/cuewydxh/strauss.symdata.ro/client/cart/index.php(19): Product->__construct()
+#1 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/classes/Product.php on line 9
