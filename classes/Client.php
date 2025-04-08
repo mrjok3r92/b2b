@@ -68,6 +68,67 @@ class Client {
         return $this->db->resultSet();
     }
     
+    // Obține lista de clienți cu paginare
+    public function getAllClientsPaginated($limit = 10, $offset = 0) {
+        $this->db->query('SELECT * FROM clients 
+                          ORDER BY company_name ASC 
+                          LIMIT :limit OFFSET :offset');
+        
+        $this->db->bind(':limit', $limit, PDO::PARAM_INT);
+        $this->db->bind(':offset', $offset, PDO::PARAM_INT);
+        
+        return $this->db->resultSet();
+    }
+    
+    // Obține numărul total de clienți
+    public function getTotalClients() {
+        $this->db->query('SELECT COUNT(*) as count FROM clients');
+        $result = $this->db->single();
+        return $result['count'];
+    }
+    
+    // Caută clienți după nume, cod fiscal, telefon sau email
+    public function searchClients($search, $limit = 10, $offset = 0) {
+        $this->db->query('SELECT * FROM clients 
+                          WHERE company_name LIKE :search 
+                             OR fiscal_code LIKE :search 
+                             OR phone LIKE :search 
+                             OR email LIKE :search 
+                          ORDER BY company_name ASC 
+                          LIMIT :limit OFFSET :offset');
+        
+        $this->db->bind(':search', '%' . $search . '%');
+        $this->db->bind(':limit', $limit, PDO::PARAM_INT);
+        $this->db->bind(':offset', $offset, PDO::PARAM_INT);
+        
+        return $this->db->resultSet();
+    }
+    
+    // Numără rezultatele căutării
+    public function countSearchResults($search) {
+        $this->db->query('SELECT COUNT(*) as count FROM clients 
+                          WHERE company_name LIKE :search 
+                             OR fiscal_code LIKE :search 
+                             OR phone LIKE :search 
+                             OR email LIKE :search');
+        
+        $this->db->bind(':search', '%' . $search . '%');
+        
+        $result = $this->db->single();
+        return $result['count'];
+    }
+    
+    // Obține clienții adăugați recent
+    public function getRecentClients($limit = 5) {
+        $this->db->query('SELECT * FROM clients 
+                          ORDER BY created_at DESC 
+                          LIMIT :limit');
+        
+        $this->db->bind(':limit', $limit, PDO::PARAM_INT);
+        
+        return $this->db->resultSet();
+    }
+    
     // Șterge client
     public function deleteClient($id) {
         $this->db->query('DELETE FROM clients WHERE id = :id');
