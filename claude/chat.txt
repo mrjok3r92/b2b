@@ -2357,3 +2357,767 @@ document.addEventListener('DOMContentLoaded', function() {
 // Include footer
 include_once '../../includes/footer.php';
 ?>
+hai sa continuam cu managementul produselor
+
+Voi continua cu implementarea managementului de produse pentru platforma B2B. Vom dezvolta restul componentelor necesare pentru administrarea produselor, inclusiv pagina de vizualizare detaliată și gestionarea categoriilor.
+
+Voi începe cu pagina pentru vizualizarea detaliată a unui produs:
+
+
+Pagina de vizualizare detaliată a produsului
+Code 
+Acum voi crea pagina pentru adăugarea unui preț specific pentru un client:
+
+
+Pagina pentru adăugarea unui preț specific
+Code 
+
+continue
+
+Voi continua cu implementarea paginii pentru adăugarea unui preț specific:
+
+
+Pagina pentru adăugarea unui preț specific
+Code ∙ Version 2 
+Acum voi crea pagina pentru gestionarea categoriilor de produse:
+
+
+Pagina pentru gestionarea categoriilor de produse
+Code 
+Acum voi crea pagina pentru ștergerea unui produs:
+
+
+Pagina pentru ștergerea unui produs
+Code 
+
+continue
+
+Voi continua cu implementarea paginii pentru ștergerea unui produs:
+
+
+Pagina pentru ștergerea unui produs
+Code ∙ Version 2 
+Acum, voi crea fișierul pentru editarea unui preț specific pentru un client:
+
+
+Pagina pentru editarea unui preț specific
+Code 
+Voi implementa acum pagina pentru ștergerea unui preț specific:
+
+
+Pagina pentru ștergerea unui preț specific
+Code 
+Pentru a completa managementul de produse, voi actualiza clasa Product cu metodele necesare pentru a gestiona toate aceste funcționalități:
+
+
+Clasa Product pentru gestionarea produselor
+Code 
+
+continue
+
+Voi continua cu implementarea clasei Product pentru gestionarea produselor:
+
+
+Clasa Product pentru gestionarea produselor
+Code ∙ Version 2 
+Am implementat sistemul complet de management al produselor pentru platforma B2B. Acesta include următoarele funcționalități:
+
+1. Pagini pentru administrare
+Listare și filtrare produse
+Afișarea tuturor produselor cu paginare
+Filtrare avansată după categorie și status
+Căutare după nume, cod și descriere
+Acțiuni rapide pentru fiecare produs (vizualizare, editare, ștergere)
+Gestionare produse
+Adăugare produse noi cu toate informațiile necesare
+Editare produse existente
+Vizualizare detaliată a produselor cu informații complete
+Ștergere produse (cu verificări de siguranță pentru produsele utilizate în comenzi)
+Încărcare și gestionare imagini pentru produse
+Gestionare prețuri specifice
+Adăugare prețuri personalizate pentru clienți specifici
+Editare prețuri existente
+Ștergere prețuri specifice cu revenire la prețul standard
+Calculare automată a diferențelor de preț și a procentelor
+Gestionare categorii
+Afișare structură arborescentă a categoriilor
+Adăugare categorii și subcategorii
+Editare categorii existente
+Ștergere categorii (doar dacă nu au produse sau subcategorii)
+2. Funcționalități backend (Clasa Product)
+Am implementat o clasă Product completă care oferă:
+
+Operațiuni CRUD pentru produse (create, read, update, delete)
+Paginare și filtrare avansată
+Căutare și sortare produse
+Gestionare prețuri specifice pentru clienți
+Vizualizare istoric comenzi pentru un produs
+Gestionare categorii și subcategorii
+Verificări de siguranță pentru operațiunile de ștergere
+Integrare cu sistemul de comenzi
+3. Caracteristici suplimentare
+Securitate: validare și sanitizare date, protecție CSRF
+Design modern și responsiv cu Tailwind CSS
+Interfață intuitivă cu filtre avansate
+Confirmări pentru acțiunile importante
+Feedback vizual pentru utilizatori (mesaje de succes, eroare)
+Gestionare eficientă a imaginilor produselor
+Acest sistem de management al produselor constituie una dintre componentele fundamentale ale platformei B2B, permițând administratorilor să gestioneze eficient catalogul de produse și să ofere prețuri personalizate pentru clienți.
+
+Ați dori să implementăm altă componentă a platformei sau să extindem funcționalitățile existente pentru managementul produselor?
+
+hai sa facem partea de avize
+
+Voi implementa componenta de gestionare a avizelor pentru platforma B2B. Avizele de livrare sunt documente esențiale care însoțesc produsele livrate către clienți după aprobarea comenzilor.
+
+Voi începe prin crearea paginii principale pentru gestionarea avizelor în panoul de administrare:
+
+
+Pagina principală pentru gestionarea avizelor
+Code 
+Acum voi crea pagina pentru vizualizarea detaliată a unui aviz de livrare:
+
+
+Pagina pentru vizualizarea unui aviz de livrare
+Code 
+
+continue
+
+Voi continua implementarea paginii pentru vizualizarea detaliată a unui aviz de livrare:
+
+
+Pagina pentru vizualizarea unui aviz de livrare
+Code ∙ Version 2 
+Acum voi crea pagina pentru generarea unui nou aviz de livrare:
+
+
+Pagina pentru crearea unui aviz de livrare
+Code 
+
+continue
+
+Voi continua cu implementarea paginii pentru crearea unui aviz de livrare:
+
+
+Pagina pentru crearea unui aviz de livrare
+Code ∙ Version 2 
+Voi implementa acum pagina pentru anularea unui aviz de livrare:
+
+
+Pagina pentru anularea unui aviz de livrare
+Code 
+Acum voi implementa pagina pentru generarea avizului de livrare în format de imprimare:
+
+
+Pagina pentru imprimarea unui aviz de livrare
+Code 
+
+continue
+
+Voi continua cu implementarea paginii pentru imprimarea unui aviz de livrare:
+
+
+Pagina pentru imprimarea unui aviz de livrare
+Code ∙ Version 2 
+Pentru a finaliza implementarea sistemului de avize, voi actualiza clasa DeliveryNote cu metodele necesare:
+
+
+Clasa DeliveryNote pentru gestionarea avizelor
+Code 
+
+continue
+
+Continuând cu implementarea clasei DeliveryNote:
+
+
+Clasa DeliveryNote pentru gestionarea avizelor
+Code ∙ Version 2 
+Acum voi crea clasa Company care va fi folosită pentru a gestiona informațiile companiei emitente (pentru a fi incluse în avize):
+
+
+Clasa Company pentru gestionarea informațiilor companiei
+Code 
+Am finalizat implementarea componentei de gestionare a avizelor de livrare pentru platforma B2B. Această componentă include:
+
+1. Pagini Administrative pentru Gestionarea Avizelor
+Pagina de listare a avizelor
+Filtrare avansată după client, status, date și termen de căutare
+Afișare de statistici rapide privind avizele (total, trimise, livrate, anulate)
+Opțiuni pentru vizualizare, editare, imprimare și ștergere
+Paginare pentru navigare ușoară în liste mari
+Pagina de vizualizare detaliată a avizelor
+Afișare informații complete despre aviz (număr, serie, date)
+Detalii despre client și locația de livrare
+Lista produselor incluse cu cantități și prețuri
+Istoric al statusurilor avizului
+Observații și note
+Creare avize noi
+Selectare comenzi aprobate cu produse nelivrate
+Completare automată a numerelor de aviz
+Selectare produse din comandă și cantități pentru livrare parțială
+Posibilitatea adăugării de observații
+Actualizare status avize
+Marcare aviz ca trimis
+Marcare aviz ca livrat
+Anulare aviz cu specificarea motivului
+Imprimare avize
+Generare aviz de livrare în format de imprimare
+Design profesional pentru documentele oficiale
+Includere informații firmă, client și locație
+2. Funcționalități Backend
+Clasa DeliveryNote: Gestionează toate operațiunile CRUD pentru avize
+Metode pentru filtrare: Permite filtrarea avizelor după diverși parametri
+Gestionare produse: Urmărește cantitățile livrate și face legătura cu comenzile
+Statusuri avize: Implementează fluxul de tranzitare între statusuri (ciornă, trimis, livrat, anulat)
+Rapoarte: Generează statistici și rapoarte pentru avizele emise
+3. Clasa Company
+Am adăugat o clasă Company pentru gestionarea informațiilor firmei emitente, care:
+
+Stochează datele de contact și fiscale ale companiei
+Permite actualizarea informațiilor
+Oferă aceste date pentru afișare în documentele oficiale (avize, facturi)
+4. Integrare cu alte componente
+Legătura cu comenzile: Avizele sunt create pe baza comenzilor aprobate
+Legătura cu clienții: Fiecare aviz este asociat unui client și unei locații specifice
+Legătura cu produsele: Avizele conțin produse specifice cu cantitățile respective
+Această componentă de gestionare a avizelor completează fluxul complet de vânzare în platforma B2B, permițând urmărirea întregului proces de la comandă la livrare.
+
+[09-Apr-2025 10:21:31 Europe/Bucharest] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cuewydxh_straussv2.delivery_note_items' doesn't exist in /home/cuewydxh/strauss.symdata.ro/config/database.php:46
+Stack trace:
+#0 /home/cuewydxh/strauss.symdata.ro/config/database.php(46): PDO->prepare()
+#1 /home/cuewydxh/strauss.symdata.ro/classes/DeliveryNote.php(153): Database->query()
+#2 /home/cuewydxh/strauss.symdata.ro/admin/delivery-notes/index.php(31): DeliveryNote->getFilteredDeliveryNotes()
+#3 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/config/database.php on line 46
+
+Se pare că avem o eroare deoarece tabelele pentru avize de livrare nu există încă în baza de date. Pentru a rezolva această problemă, trebuie să creăm un script SQL pentru crearea tabelelor necesare componentei de avize.
+
+Voi crea un script SQL care va defini structura tabelelor pentru avize de livrare:
+
+
+Script SQL pentru crearea tabelelor de avize
+Code 
+De asemenea, trebuie să adăugăm o metodă în clasa Order pentru a obține comenzile care nu au fost livrate complet, care este folosită în pagina de creare a avizelor:
+
+
+Metoda getOrdersWithoutFullDeliveryNotes pentru clasa Order
+Code 
+Eroarea apare deoarece tabelele pentru avize de livrare (delivery_notes și delivery_note_items) nu există încă în baza de date. Iată cum putem rezolva acest lucru:
+
+Instalează tabelele în baza de date:
+Rulează scriptul SQL pe care l-am creat (delivery-notes-tables.sql) în baza de date prin phpMyAdmin sau alt instrument SQL
+Acest script va crea cele trei tabele necesare:
+delivery_notes - pentru stocarea informațiilor generale despre avize
+delivery_note_items - pentru stocarea produselor din avize
+company_info - pentru stocarea informațiilor companiei emitente
+Adaugă metoda getOrdersWithoutFullDeliveryNotes() în clasa Order:
+Această metodă este utilizată în pagina de creare a avizelor pentru a afișa comenzile care nu au fost încă livrate complet
+Codul pentru această metodă este furnizat în artefactul order-update.php
+Adaugă această metodă în fișierul classes/Order.php
+Verifică dependențele SQL:
+Este posibil să existe probleme cu constrângerile cheilor străine dacă tabelele referențiate nu există
+Dacă întâmpini erori de constrângere, rulează scriptul SQL fără secțiunea finală cu constrângeri sau ajustează constrângerile pentru a se potrivi cu structura bazei tale de date
+După implementarea acestor modificări, pagina de avize ar trebui să funcționeze corect, permițându-ți să gestionezi avizele de livrare ca parte a fluxului de lucru B2B.
+
+Să știi că, de asemenea, poți să-mi prezinți alte erori întâmpinate în timpul implementării, și te voi ajuta să le rezolvi rapid.
+
+
+-- Structura bazei de date pentru platforma B2B -- Crearea bazei de date CREATE DATABASE IF NOT EXISTS b2b_platform; USE b2b_platform; -- Tabel pentru clienți CREATE TABLE clients ( id INT AUTO_INCREMENT PRIMARY KEY, company_name VARCHAR(100) NOT NULL, company_code VARCHAR(50
+
+pasted
+
+asta e baza de date existenta
+
+Observ că există deja o structură inițială de bază de date pentru platforma B2B, inclusiv tabele pentru avize de livrare (delivery_notes și delivery_note_details). Totuși, structura existentă diferă de cea pe care am implementat-o în component de avize.
+
+Pentru a adapta noua componentă de avize la structura existentă, am două opțiuni:
+
+Modificăm structura existentă pentru a se potrivi cu noua componentă de avize
+Adaptăm noua componentă de avize pentru a folosi structura existentă
+Voi propune o soluție de adaptare a structurii existente, păstrând compatibilitatea cu datele actuale dar adăugând câmpurile necesare pentru noua funcționalitate.
+
+
+Script SQL pentru actualizarea tabelelor existente
+Code 
+De asemenea, trebuie să actualizăm clasele noastre pentru a lucra cu structura de tabele modificată. În special, trebuie să actualizăm clasa DeliveryNote pentru a reflecta numele corect de tabele și câmpuri:
+
+
+Actualizare metoda getOrdersWithoutFullDeliveryNotes
+Code 
+Acum voi actualiza și metoda pentru DeliveryNoteClass pentru a reflecta noile schimbări din structura bazei de date:
+
+
+Actualizări pentru clasa DeliveryNote
+Code 
+În urma analizei bazei de date existente, am identificat că structura tabelelor pentru avize diferă de cea implementată în noua componentă. Pentru a rezolva eroarea și a face noua componentă de avize funcțională, trebuie să:
+
+1. Actualizați structura tabelelor existente
+Am creat un script SQL care va modifica tabelele existente pentru a adăuga câmpurile necesare componentei noi de avize:
+
+sql
+-- Modificare tabel delivery_notes pentru a adăuga câmpurile necesare
+ALTER TABLE delivery_notes 
+  ADD COLUMN client_id INT NOT NULL AFTER order_id,
+  ADD COLUMN location_id INT NOT NULL AFTER client_id,
+  ADD COLUMN series VARCHAR(10) NOT NULL AFTER location_id,
+  ADD COLUMN issue_date DATE NOT NULL AFTER delivery_note_number,
+  ADD COLUMN sent_date DATETIME DEFAULT NULL AFTER issue_date,
+  ADD COLUMN cancelled_date DATETIME DEFAULT NULL AFTER delivery_date,
+  ADD COLUMN status ENUM('draft','sent','delivered','cancelled') NOT NULL DEFAULT 'pending' AFTER cancelled_date,
+  ADD COLUMN cancel_reason TEXT DEFAULT NULL AFTER notes,
+  ADD COLUMN created_by INT DEFAULT NULL AFTER cancel_reason,
+  ADD FOREIGN KEY (client_id) REFERENCES clients(id),
+  ADD FOREIGN KEY (location_id) REFERENCES locations(id),
+  ADD FOREIGN KEY (created_by) REFERENCES users(id);
+
+-- Redenumește tabelul delivery_note_details în delivery_note_items
+RENAME TABLE delivery_note_details TO delivery_note_items;
+
+-- Adaugă câmpurile necesare în tabelul delivery_note_items
+ALTER TABLE delivery_note_items
+  ADD COLUMN order_item_id INT NOT NULL AFTER delivery_note_id,
+  ADD COLUMN product_code VARCHAR(50) NOT NULL AFTER product_id,
+  ADD COLUMN product_name VARCHAR(255) NOT NULL AFTER product_code,
+  ADD COLUMN unit VARCHAR(20) NOT NULL AFTER product_name,
+  ADD COLUMN unit_price DECIMAL(10,2) NOT NULL AFTER quantity,
+  ADD FOREIGN KEY (order_item_id) REFERENCES order_details(id);
+2. Creați tabelul pentru informațiile companiei
+Acest tabel este necesar pentru printarea avizelor cu datele companiei:
+
+sql
+-- Creează tabelul pentru informațiile companiei
+CREATE TABLE IF NOT EXISTS `company_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `fiscal_code` varchar(50) NOT NULL,
+  `registration_number` varchar(50) NOT NULL,
+  `address` text NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `bank_name` varchar(100) DEFAULT NULL,
+  `bank_account` varchar(50) DEFAULT NULL,
+  `logo` varchar(255) DEFAULT NULL,
+  `website` varchar(100) DEFAULT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  PRIMARY KEY (`id`)
+);
+3. Adaptați clasele PHP la noua structură
+Am actualizat metodele din clasa DeliveryNote și Order pentru a funcționa cu noua structură a bazelor de date. În principal:
+
+Am schimbat numele tabelului delivery_note_details în delivery_note_items
+Am adaptat metodele care interacționează cu aceste tabele pentru a utiliza noile nume de coloane
+Am actualizat metodele de interogare pentru a reflecta relațiile cu order_details în loc de order_items
+Pași de implementare:
+Rulați scriptul SQL de actualizare a tabelelor (artefactul update-existing-tables.sql)
+Actualizați clasa Order cu metoda actualizată (artefactul update-order-class.php)
+Actualizați clasa DeliveryNote cu metodele adaptate (artefactul update-delivery-note-class.php)
+După implementarea acestor modificări, componenta de avize ar trebui să funcționeze corect cu structura bazei de date existente. Această abordare minimizează schimbările în baza de date, păstrând compatibilitatea cu datele existente, dar adăugând toate funcționalitățile necesare pentru noua componentă de avize.
+
+Aceste modificări vor rezolva eroarea "Table 'cuewydxh_straussv2.delivery_note_items' doesn't exist" prin redenumirea tabelului existent delivery_note_details și adăugarea câmpurilor necesare.
+
+ALTER TABLE delivery_notes   ADD COLUMN client_id INT NOT NULL AFTER order_id,  ADD COLUMN location_id INT NOT NULL AFTER client_id,  ADD COLUMN series VARCHAR(10) NOT NULL AFTER location_id,  ADD COLUMN issue_date DATE NOT NULL AFTER delivery_note_number,  ADD COLUMN sent_date DATETIME DEFAULT NULL AFTER issue_date,  ADD COLUMN cancelled_date DATETIME DEFAULT NULL AFTER delivery_date,  ADD COLUMN status ENUM('draft','sent','delivered','cancelled') NOT NULL DEFAULT 'pending' AFTER cancelled_date,  ADD COLUMN cancel_reason TEXT DEFAULT NULL AFTER notes,  ADD COLUMN created_by INT DEFAULT NULL AFTER cancel_reason,  ADD FOREIGN KEY (client_id) REFERENCES clients(id),  ADD FOREIGN KEY (location_id) REFERENCES locations(id),  ADD FOREIGN KEY (created_by) REFERENCES users(id);
+
+Văd că ai încercat să adaugi coloanele necesare în tabelul delivery_notes. Au apărut erori la executarea acestui script SQL? Este posibil să fie nevoie de o abordare mai incrementală pentru a adăuga aceste coloane, mai ales dacă există deja date în tabel.
+
+Iată câteva posibile probleme și soluții:
+
+Adăugarea coloanelor NOT NULL fără valori implicite: Dacă tabelul conține deja date, adăugarea unei coloane NOT NULL fără o valoare implicită va genera erori.
+Referințe circulare sau incompatibile cu cheile străine: Este posibil ca unele referințe să nu poată fi create din cauza incompatibilităților.
+Conflicte de nume: Unele coloane ar putea deja să existe sub alte nume.
+Sugestiile mele:
+
+Verifică structura actuală a tabelului pentru a vedea care coloane există deja:
+sql
+DESCRIBE delivery_notes;
+Adaugă coloanele una câte una și setează valori implicite pentru coloanele NOT NULL:
+sql
+ALTER TABLE delivery_notes ADD COLUMN client_id INT AFTER order_id;
+ALTER TABLE delivery_notes ADD COLUMN location_id INT AFTER client_id;
+-- Apoi populează coloanele cu date
+UPDATE delivery_notes dn
+JOIN orders o ON dn.order_id = o.id
+SET dn.client_id = o.client_id, dn.location_id = o.location_id;
+
+-- După populare, adaugă constrângerea NOT NULL
+ALTER TABLE delivery_notes MODIFY COLUMN client_id INT NOT NULL;
+ALTER TABLE delivery_notes MODIFY COLUMN location_id INT NOT NULL;
+Adaugă cheile străine separat după ce te-ai asigurat că toate datele sunt valide:
+sql
+ALTER TABLE delivery_notes ADD FOREIGN KEY (client_id) REFERENCES clients(id);
+Dacă poți să-mi spui exact ce erori ai întâmpinat, pot să-ți ofer o soluție mai specifică pentru problema ta.
+
+
+cuewydxh_straussv2.sql
+472 lines
+
+sql
+
+baza de date curenta
+
+Acum am un tablou complet al structurii bazei de date curente. Bazat pe aceasta, voi crea un script SQL specific care va actualiza tabelele existente pentru a fi compatibile cu noua componentă de avize, ținând cont de structura actuală.
+
+
+Script SQL pentru actualizarea tabelelor de avize - versiune finală
+Code 
+Acum că avem o înțelegere clară a structurii bazei de date existente, am creat un script actualizat care va modifica tabelele pentru a fi compatibile cu noua componentă de avize. Acest script este împărțit în pași secvențiali pentru a evita erorile și pentru a asigura integritatea datelor.
+
+Pasul 1: Executați scriptul de actualizare
+Scriptul de actualizare are următoarele etape principale:
+
+Modificare tabel delivery_notes:
+Adaugă coloanele necesare (client_id, location_id, series, issue_date, etc.)
+Populează datele pentru coloanele noi bazat pe informațiile existente
+Adaugă constrângerile NOT NULL și cheile străine
+Actualizare status avize:
+Convertește statusurile existente la noile valori
+Modifică definiția coloanei pentru a include toate statusurile noi
+Redenumire și actualizare tabel de detalii avize:
+Redenumește delivery_note_details în delivery_note_items
+Adaugă noile coloane (order_item_id, product_code, product_name, etc.)
+Populează datele pentru coloanele noi
+Creare tabel company_info:
+Creează tabelul pentru stocarea informațiilor companiei
+Inserează date implicite
+Pasul 2: Actualizați fișierele clasei DeliveryNote
+După actualizarea bazei de date, va trebui să modificați clasa DeliveryNote pentru a lucra cu noua structură. Actualizările necesare includ:
+
+Adaptarea metodelor care lucrează cu tabelul delivery_note_items
+Asigurarea că metodele folosesc corect noile câmpuri
+Actualizarea referințelor la order_details în loc de order_items
+Pasul 3: Actualizați fișierele clasei Order
+De asemenea, metoda getOrdersWithoutFullDeliveryNotes() din clasa Order trebuie actualizată pentru a reflecta structura bazei de date:
+
+php
+public function getOrdersWithoutFullDeliveryNotes() {
+    $this->db->query('SELECT o.id, o.order_number, o.order_date, o.total_amount, 
+                        c.company_name, c.fiscal_code
+                      FROM orders o 
+                      JOIN clients c ON o.client_id = c.id 
+                      WHERE o.status = "approved" AND 
+                      (
+                        -- Comenzi care nu au niciun aviz
+                        NOT EXISTS (
+                          SELECT 1 FROM delivery_notes dn 
+                          WHERE dn.order_id = o.id
+                        )
+                        OR
+                        -- Comenzi care au avize, dar nu toate produsele sunt complet livrate
+                        EXISTS (
+                          SELECT 1 FROM order_details od 
+                          WHERE od.order_id = o.id 
+                          AND (
+                            SELECT COALESCE(SUM(dni.quantity), 0) 
+                            FROM delivery_note_items dni 
+                            JOIN delivery_notes dn ON dni.delivery_note_id = dn.id 
+                            WHERE dni.order_item_id = od.id 
+                            AND dn.status != "cancelled"
+                          ) < od.quantity
+                        )
+                      )
+                      ORDER BY o.order_date DESC');
+    
+    return $this->db->resultSet();
+}
+Considerații importante
+Backup înainte de modificări: Faceți întotdeauna un backup al bazei de date înainte de a rula scripturile de actualizare.
+Execuție secvențială: Scriptul este conceput pentru execuție secvențială; rulați fiecare pas individual pentru a putea monitoriza orice eroare.
+Date existente: Dacă există deja date în tabelele de avize, scriptul va încerca să le migreze corect, dar verificați datele după migrare.
+Verificări post-actualizare: După rularea scriptului, verificați că toate relațiile din baza de date sunt corecte și că aplicația funcționează normal.
+Acest proces de actualizare va permite implementarea noii componente de avize menținând în același timp compatibilitatea cu structura existentă a bazei de date.
+
+avizele trebuiesc generate de comenzile acceptate
+
+Ai dreptate, avizele trebuie generate doar pentru comenzile care au fost acceptate (aprobate). Acesta este un aspect important al fluxului de lucru.
+
+Voi actualiza sistemul pentru a ne asigura că avizele pot fi generate doar pentru comenzi cu statusul "approved". Iată ajustările necesare:
+
+În pagina de creare a avizelor:
+Voi modifica metoda getOrdersWithoutFullDeliveryNotes() pentru a filtra doar comenzile cu status "approved"
+Deja am inclus această condiție în codul anterior: WHERE o.status = "approved" AND ...
+Validări suplimentare:
+În metoda de adăugare a avizelor (addDeliveryNote()), trebuie să verificăm că statusul comenzii este "approved" înainte de a permite crearea avizului
+Această verificare poate fi implementată la începutul metodei
+Interfața de utilizator:
+În pagina de listare a comenzilor, trebuie să afișăm opțiunea de "Generare aviz" doar pentru comenzile aprobate
+În pagina de detalii a comenzii, butonul "Generare aviz" trebuie să fie vizibil doar pentru comenzile aprobate
+Iată un exemplu de cod de validare pe care îl putem adăuga la începutul metodei addDeliveryNote():
+
+php
+public function addDeliveryNote($data) {
+    // Verifică dacă comanda este aprobată
+    $this->db->query('SELECT status FROM orders WHERE id = :order_id');
+    $this->db->bind(':order_id', $data['order_id']);
+    $order = $this->db->single();
+    
+    if (!$order || $order['status'] !== 'approved') {
+        return false; // Nu permite crearea avizului pentru comenzi care nu sunt aprobate
+    }
+    
+    // Continuă cu inserarea avizului...
+    $this->db->query('INSERT INTO delivery_notes (
+                        order_id, client_id, location_id, series, delivery_note_number, 
+                        issue_date, status, notes, created_by
+                      ) VALUES (
+                        :order_id, :client_id, :location_id, :series, :delivery_note_number, 
+                        :issue_date, :status, :notes, :created_by
+                      )');
+    
+    // [restul codului rămâne neschimbat]
+}
+De asemenea, în interfața utilizator, când afișăm lista de comenzi disponibile pentru avizare, putem adăuga o verificare explicită:
+
+php
+<select id="order_id" name="order_id" required>
+    <option value="">-- Selectați comanda --</option>
+    <?php foreach ($pendingOrders as $order): ?>
+        <?php if ($order['status'] === 'approved'): // Verificare explicită ?>
+            <option value="<?php echo $order['id']; ?>">
+                <?php echo htmlspecialchars($order['order_number']); ?> - 
+                <?php echo htmlspecialchars($order['company_name']); ?> -
+                <?php echo date('d.m.Y', strtotime($order['order_date'])); ?>
+            </option>
+        <?php endif; ?>
+    <?php endforeach; ?>
+</select>
+Aceste modificări vor asigura că avizele pot fi generate doar pentru comenzile care au fost aprobate, respectând astfel fluxul corect de lucru în platforma B2B.
+
+creeaza fisierul de categorii pentru produse
+
+Voi crea un fișier pentru gestionarea categoriilor de produse:
+
+
+Pagina pentru gestionarea categoriilor de produse
+Code 
+Acum voi crea și metode necesare în clasa Product pentru a gestiona categoriile:
+
+
+Metode pentru gestionarea categoriilor în clasa Product
+Code 
+Am creat fișierul pentru gestionarea categoriilor de produse. Această implementare include:
+
+1. Pagina pentru gestionarea categoriilor (admin/products/categories.php)
+Această pagină oferă următoarele funcționalități:
+
+Vizualizarea listei de categorii
+Afișarea tuturor categoriilor de produse
+Informații despre numele, descrierea și numărul de produse din fiecare categorie
+Opțiuni pentru editarea și ștergerea categoriilor
+Adăugarea unei categorii noi
+Formular pentru introducerea numelui și descrierii categoriei
+Validare date pentru a asigura introducerea informațiilor corecte
+Editarea unei categorii existente
+Formular pre-completat cu datele categoriei
+Posibilitatea de a actualiza numele și descrierea
+Ștergerea unei categorii
+Verificare de siguranță pentru a preveni ștergerea categoriilor cu produse asociate
+Confirmare înainte de ștergere pentru a evita acțiunile accidentale
+2. Metode pentru clasa Product
+Am creat un set de metode pentru clasa Product care trebuie adăugate în fișierul classes/Product.php pentru a susține funcționalitățile legate de categorii:
+
+addCategory() - Adaugă o categorie nouă
+updateCategory() - Actualizează o categorie existentă
+deleteCategory() - Șterge o categorie
+getCategoryById() - Obține informațiile unei categorii specifice
+getAllCategories() - Obține lista tuturor categoriilor
+countProductsByCategory() - Numără produsele dintr-o categorie
+Integrare în sistemul existent
+Pentru a integra aceste funcționalități în sistemul existent:
+
+Adaugă fișierul categories.php în directorul admin/products/
+Adaugă metodele necesare în clasa Product din classes/Product.php
+Adaugă un link către pagina de categorii în interfața de administrare a produselor
+Această implementare permite administratorilor să organizeze produsele în categorii, facilitând astfel navigarea și căutarea produselor atât pentru administratori cât și pentru clienți.
+
+
+<?php // classes/Product.php require_once __DIR__ . '/../config/database.php'; class Product { private $db; public function __construct() { $this->db = new Database(); } /** * Adaugă un produs nou * * @param array $data Datele produsul
+
+pasted
+
+Product.php
+
+Văd că ai deja implementate toate metodele necesare pentru gestionarea categoriilor de produse în clasa Product. Metodele includ:
+
+addCategory() - Pentru adăugarea unei categorii noi
+updateCategory() - Pentru actualizarea unei categorii existente
+deleteCategory() - Pentru ștergerea unei categorii
+getCategoryById() - Pentru obținerea informațiilor despre o categorie
+getAllCategories() - Pentru obținerea listei tuturor categoriilor
+countProductsByCategory() - Pentru numărarea produselor dintr-o categorie
+hasSubcategories() - Pentru verificarea dacă o categorie are subcategorii
+getTopLevelCategories() - Pentru obținerea categoriilor de nivel superior
+getSubcategories() - Pentru obținerea subcategoriilor unei categorii
+De asemenea, observ că metoda addCategory() și updateCategory() din clasa ta existentă includ un parametru parent_id, care permite suport pentru categorii ierarhice (categorii și subcategorii).
+
+Fișierul de gestionare a categoriilor pe care l-am creat (admin/products/categories.php) ar trebui să funcționeze bine cu clasa ta existentă, însă trebuie actualizat pentru a suporta această structură ierarhică. Principala diferență este că formularul ar trebui să includă un câmp pentru selectarea categoriei părinte.
+
+Având în vedere acest fapt, ai două opțiuni:
+
+Folosești fișierul pe care l-am creat, după ce modifici structura bazei de date pentru a adăuga coloana parent_id:
+sql
+ALTER TABLE product_categories ADD COLUMN parent_id INT NULL AFTER description;
+ALTER TABLE product_categories ADD FOREIGN KEY (parent_id) REFERENCES product_categories(id) ON DELETE SET NULL;
+Actualizez fișierul de gestionare a categoriilor pentru a funcționa cu clasa existentă, incluzând suportul pentru structura ierarhică.
+Care dintre aceste două opțiuni preferi?
+
+[09-Apr-2025 10:54:19 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method DeliveryNote::getClientDeliveryNotes() in /home/cuewydxh/strauss.symdata.ro/client/index.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/client/index.php on line 29
+
+Această eroare indică faptul că metoda getClientDeliveryNotes() pe care clientul încearcă să o acceseze din fișierul /client/index.php nu există în clasa DeliveryNote. Această metodă ar trebui să returneze avizele de livrare pentru un anumit client.
+
+Voi crea această metodă pentru a rezolva eroarea:
+
+
+Metoda getClientDeliveryNotes pentru clasa DeliveryNote
+Code 
+De asemenea, ar fi util să verificăm cum este folosită această metodă în /client/index.php pentru a fi siguri că implementarea noastră corespunde așteptărilor:
+
+
+Pagina de afișare a avizelor de livrare pentru client
+Code 
+Am implementat metoda getClientDeliveryNotes() care lipsea din clasa DeliveryNote, cauzând eroarea. Această metodă obține avizele de livrare pentru un anumit client.
+
+De asemenea, am creat o pagină pentru a fi folosită în secțiunea de client, care afișează avizele de livrare ale clientului (posibil similară cu ce ai deja implementat).
+
+Pentru a rezolva eroarea, urmează acești pași:
+
+Adaugă metoda getClientDeliveryNotes() în clasa DeliveryNote (din fișierul classes/DeliveryNote.php):
+php
+/**
+ * Obține avizele de livrare pentru un client
+ * 
+ * @param int $client_id ID-ul clientului
+ * @param int $limit Limita de rezultate (0 pentru toate)
+ * @param int $offset De unde începe afișarea
+ * @return array Lista avizelor pentru client
+ */
+public function getClientDeliveryNotes($client_id, $limit = 0, $offset = 0) {
+    $sql = 'SELECT dn.*, 
+                o.order_number, l.name as location_name,
+                (SELECT SUM(dni.quantity * dni.unit_price) FROM delivery_note_items dni WHERE dni.delivery_note_id = dn.id) as total_amount
+              FROM delivery_notes dn 
+              JOIN orders o ON dn.order_id = o.id 
+              JOIN locations l ON dn.location_id = l.id 
+              WHERE dn.client_id = :client_id 
+              ORDER BY dn.issue_date DESC';
+    
+    // Adaugă limita dacă este specificată
+    if ($limit > 0) {
+        $sql .= ' LIMIT :limit OFFSET :offset';
+    }
+    
+    $this->db->query($sql);
+    $this->db->bind(':client_id', $client_id);
+    
+    if ($limit > 0) {
+        $this->db->bind(':limit', $limit, PDO::PARAM_INT);
+        $this->db->bind(':offset', $offset, PDO::PARAM_INT);
+    }
+    
+    return $this->db->resultSet();
+}
+
+/**
+ * Numără avizele de livrare pentru un client
+ * 
+ * @param int $client_id ID-ul clientului
+ * @return int Numărul total de avize
+ */
+public function countClientDeliveryNotes($client_id) {
+    $this->db->query('SELECT COUNT(*) as count 
+                      FROM delivery_notes 
+                      WHERE client_id = :client_id');
+    $this->db->bind(':client_id', $client_id);
+    
+    $result = $this->db->single();
+    return $result['count'];
+}
+Verifică fișierul client/index.php pentru a vedea cum este utilizată această metodă:
+Dacă este vorba de o pagină de dashboard pentru client, ar putea afișa recent avize
+Dacă este pagina principală a clientului, ar putea afișa avizele recente sau statistici
+În funcție de contextul exact, s-ar putea să fie nevoie să adaptezi metoda sau implementarea.
+După adăugarea acestor metode, eroarea ar trebui să dispară și clientul ar trebui să poată vedea avizele sale corespunzător.
+
+[09-Apr-2025 10:57:24 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method Product::getActiveProducts() in /home/cuewydxh/strauss.symdata.ro/client/products/index.php:27
+Stack trace:
+#0 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/client/products/index.php on line 27
+
+Din eroarea afișată, observ că metoda getActiveProducts() este apelată în fișierul /client/products/index.php la linia 27, dar această metodă nu există în clasa Product. Voi implementa această metodă pentru a rezolva eroarea.
+
+
+Metoda getActiveProducts pentru clasa Product
+Code 
+Această eroare arată că metoda getActiveProducts() lipsește din clasa Product. Metoda este probabil folosită pentru a afișa produsele active în interfața clientului.
+
+Am implementat această metodă, care va returna produsele cu status "active":
+
+php
+/**
+ * Obține produsele active
+ * 
+ * @param int $limit Numărul de produse pe pagină (0 pentru toate)
+ * @param int $offset De unde începe
+ * @return array Lista de produse active
+ */
+public function getActiveProducts($limit = 0, $offset = 0) {
+    $sql = 'SELECT p.*, c.name as category_name 
+            FROM products p 
+            LEFT JOIN product_categories c ON p.category_id = c.id 
+            WHERE p.status = "active" 
+            ORDER BY p.name ASC';
+    
+    // Adaugă limitarea doar dacă este specificată
+    if ($limit > 0) {
+        $sql .= ' LIMIT :limit OFFSET :offset';
+    }
+    
+    $this->db->query($sql);
+    
+    // Leagă parametrii de limitare doar dacă sunt folosiți
+    if ($limit > 0) {
+        $this->db->bind(':limit', $limit, PDO::PARAM_INT);
+        $this->db->bind(':offset', $offset, PDO::PARAM_INT);
+    }
+    
+    return $this->db->resultSet();
+}
+
+/**
+ * Numără produsele active
+ * 
+ * @return int Numărul total de produse active
+ */
+public function countActiveProducts() {
+    $this->db->query('SELECT COUNT(*) as count FROM products WHERE status = "active"');
+    $result = $this->db->single();
+    return $result['count'];
+}
+Adaugă această metodă în clasa Product din fișierul classes/Product.php. Ea va interoga baza de date pentru a obține toate produsele care au statusul "active" și suportă paginare prin parametrii $limit și $offset.
+
+De asemenea, am adăugat și metoda countActiveProducts() care returnează numărul total de produse active, utilă pentru implementarea paginării.
+
+După adăugarea acestor metode, eroarea de la /client/products/index.php ar trebui să dispară, iar pagina de produse ar trebui să se încarce corect pentru client.
+
+[09-Apr-2025 11:33:19 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method Product::getClientPrice() in /home/cuewydxh/strauss.symdata.ro/client/products/index.php:33
+Stack trace:
+#0 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/client/products/index.php on line 33
+
+Observ că apare o nouă eroare legată de pagina de produse pentru client. Acum este vorba despre metoda getClientPrice() care este apelată din fișierul /client/products/index.php la linia 33, dar care nu există în clasa Product.
+
+Voi implementa această metodă care ar trebui să returneze prețul specific pentru un client pentru un anumit produs:
+
+
+Metoda getClientPrice pentru clasa Product
+Code 
+Această metodă verifică dacă există un preț specific pentru clientul dat în tabela client_prices. Dacă există, returnează acel preț. Dacă nu există un preț specific, returnează prețul standard al produsului din tabela products.
+
+Observ că există deja o metodă similară în clasa Product numită getProductPriceForClient(), care face același lucru, dar folosește tabela client_specific_prices în loc de client_prices. Este posibil să existe o discrepanță între numele tabelelor.
+
+Din structura bazei de date pe care mi-ai arătat-o anterior (în cuewydxh_straussv2.sql), tabelul corect este client_prices. Deci implementarea mea ar trebui să funcționeze. Totuși, dacă există de fapt un tabel numit client_specific_prices, atunci ar trebui să modifici această implementare pentru a folosi acel tabel.
+
+Adaugă această metodă în clasa Product din fișierul classes/Product.php. După adăugarea acestei metode, eroarea de la /client/products/index.php ar trebui să dispară.
+
+Dacă după această modificare apar alte erori, te rog să mă informezi pentru a le rezolva.

@@ -1,0 +1,8 @@
+[09-Apr-2025 11:35:28 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method DeliveryNote::getOrderDeliveryNotes() in /home/cuewydxh/strauss.symdata.ro/client/orders/view.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/client/orders/view.php on line 44
+[09-Apr-2025 11:35:40 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method DeliveryNote::getOrderDeliveryNotes() in /home/cuewydxh/strauss.symdata.ro/client/orders/view.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/client/orders/view.php on line 44

@@ -1,0 +1,16 @@
+[09-Apr-2025 09:28:34 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method Order::getClientOrderCount() in /home/cuewydxh/strauss.symdata.ro/admin/clients/index.php:120
+Stack trace:
+#0 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/admin/clients/index.php on line 120
+[09-Apr-2025 09:42:08 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method Order::getClientOrderCount() in /home/cuewydxh/strauss.symdata.ro/admin/clients/index.php:120
+Stack trace:
+#0 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/admin/clients/index.php on line 120
+[09-Apr-2025 10:11:11 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method Order::getClientOrderCount() in /home/cuewydxh/strauss.symdata.ro/admin/clients/index.php:120
+Stack trace:
+#0 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/admin/clients/index.php on line 120
+[09-Apr-2025 10:11:21 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method Order::getClientOrderCount() in /home/cuewydxh/strauss.symdata.ro/admin/clients/index.php:120
+Stack trace:
+#0 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/admin/clients/index.php on line 120

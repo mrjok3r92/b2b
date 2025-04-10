@@ -150,4 +150,59 @@ class User {
         
         return $this->db->execute();
     }
+
+    public function getAllUsersPaginated($limit = 10, $offset = 0, $search = '') {
+        $sql = 'SELECT u.*, c.company_name, l.name as location_name  
+                FROM users u 
+                LEFT JOIN clients c ON u.client_id = c.id 
+                LEFT JOIN locations l ON u.location_id = l.id';
+        
+        if (!empty($search)) {
+            $sql .= ' WHERE u.first_name LIKE :search 
+                      OR u.last_name LIKE :search 
+                      OR u.email LIKE :search 
+                      OR c.company_name LIKE :search';
+        }
+        
+        $sql .= ' ORDER BY u.id DESC LIMIT :limit OFFSET :offset';
+        
+        $this->db->query($sql);
+        
+        if (!empty($search)) {
+            $this->db->bind(':search', '%' . $search . '%');
+        }
+        
+        $this->db->bind(':limit', $limit, PDO::PARAM_INT);
+        $this->db->bind(':offset', $offset, PDO::PARAM_INT);
+        
+        return $this->db->resultSet();
+    }
+
+    public function countAllUsers($search = '') {
+        $sql = 'SELECT COUNT(*) as count FROM users u LEFT JOIN clients c ON u.client_id = c.id';
+        
+        if (!empty($search)) {
+            $sql .= ' WHERE u.first_name LIKE :search 
+                      OR u.last_name LIKE :search 
+                      OR u.email LIKE :search 
+                      OR c.company_name LIKE :search';
+        }
+        
+        $this->db->query($sql);
+        
+        if (!empty($search)) {
+            $this->db->bind(':search', '%' . $search . '%');
+        }
+        
+        $result = $this->db->single();
+        return $result['count'];
+    }
+
+    /**
+
+ */
+    public function getTotalUsers($search = '') {
+        return $this->countAllUsers($search);
+    }
+
 }

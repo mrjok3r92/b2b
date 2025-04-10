@@ -1,4 +1,4 @@
-[08-Apr-2025 09:58:03 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method Order::getFilteredOrders() in /home/cuewydxh/strauss.symdata.ro/admin/orders/index.php:30
+[09-Apr-2025 11:38:18 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method DeliveryNote::getOrderDeliveryNotes() in /home/cuewydxh/strauss.symdata.ro/admin/orders/view.php:40
 Stack trace:
 #0 {main}
-  thrown in /home/cuewydxh/strauss.symdata.ro/admin/orders/index.php on line 30
+  thrown in /home/cuewydxh/strauss.symdata.ro/admin/orders/view.php on line 40

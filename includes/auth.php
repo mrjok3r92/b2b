@@ -17,7 +17,7 @@ function authenticateUser() {
         $_SESSION['redirect_url'] = $_SERVER['REQUEST_URI'];
         
         // Redirecționare către pagina de login
-        redirect('../login.php');
+        redirect('/login.php');
     }
 }
 

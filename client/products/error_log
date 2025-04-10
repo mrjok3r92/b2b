@@ -1,15 +1,6 @@
-[07-Apr-2025 16:22:16 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Class "Database" not found in /home/cuewydxh/strauss.symdata.ro/classes/Product.php:9
+[09-Apr-2025 11:33:19 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Call to undefined method Product::getClientPrice() in /home/cuewydxh/strauss.symdata.ro/client/products/index.php:33
 Stack trace:
-#0 /home/cuewydxh/strauss.symdata.ro/client/products/index.php(13): Product->__construct()
-#1 {main}
-  thrown in /home/cuewydxh/strauss.symdata.ro/classes/Product.php on line 9
-[07-Apr-2025 16:26:46 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Class "Database" not found in /home/cuewydxh/strauss.symdata.ro/classes/Product.php:9
-Stack trace:
-#0 /home/cuewydxh/strauss.symdata.ro/client/products/index.php(13): Product->__construct()
-#1 {main}
-  thrown in /home/cuewydxh/strauss.symdata.ro/classes/Product.php on line 9
-[07-Apr-2025 16:39:44 Europe/Bucharest] PHP Fatal error:  Uncaught Error: Class "Database" not found in /home/cuewydxh/strauss.symdata.ro/classes/Product.php:9
-Stack trace:
-#0 /home/cuewydxh/strauss.symdata.ro/client/products/index.php(13): Product->__construct()
-#1 {main}
-  thrown in /home/cuewydxh/strauss.symdata.ro/classes/Product.php on line 9
+#0 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/client/products/index.php on line 33
+[09-Apr-2025 13:16:38 Europe/Bucharest] PHP Warning:  Undefined array key 3 in /home/cuewydxh/strauss.symdata.ro/client/products/index.php on line 117
+[09-Apr-2025 13:16:38 Europe/Bucharest] PHP Warning:  Trying to access array offset on value of type null in /home/cuewydxh/strauss.symdata.ro/client/products/index.php on line 117

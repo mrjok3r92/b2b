@@ -1,0 +1,12 @@
+[09-Apr-2025 10:35:32 Europe/Bucharest] PHP Fatal error:  Cannot redeclare Product::addCategory() in /home/cuewydxh/strauss.symdata.ro/classes/Product.php on line 676
+[09-Apr-2025 10:36:11 Europe/Bucharest] PHP Warning:  Undefined array key "parent_id" in /home/cuewydxh/strauss.symdata.ro/classes/Product.php on line 559
+[09-Apr-2025 10:36:19 Europe/Bucharest] PHP Warning:  Undefined array key "parent_id" in /home/cuewydxh/strauss.symdata.ro/classes/Product.php on line 559
+[09-Apr-2025 10:36:37 Europe/Bucharest] PHP Warning:  Undefined array key "parent_id" in /home/cuewydxh/strauss.symdata.ro/classes/Product.php on line 559
+[09-Apr-2025 10:40:35 Europe/Bucharest] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cuewydxh_straussv2.client_specific_prices' doesn't exist in /home/cuewydxh/strauss.symdata.ro/config/database.php:46
+Stack trace:
+#0 /home/cuewydxh/strauss.symdata.ro/config/database.php(46): PDO->prepare()
+#1 /home/cuewydxh/strauss.symdata.ro/classes/Product.php(513): Database->query()
+#2 /home/cuewydxh/strauss.symdata.ro/admin/products/view.php(41): Product->getClientSpecificPrices()
+#3 {main}
+  thrown in /home/cuewydxh/strauss.symdata.ro/config/database.php on line 46
+[09-Apr-2025 10:40:58 Europe/Bucharest] PHP Warning:  Undefined array key "parent_id" in /home/cuewydxh/strauss.symdata.ro/classes/Product.php on line 559

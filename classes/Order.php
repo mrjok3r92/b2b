@@ -89,7 +89,7 @@ class Order {
     }
     
     // Aprobă comandă
-    public function approveOrder($order_id, $agent_id, $notes = '') {
+   /* public function approveOrder($order_id, $agent_id, $notes = '') {
         $this->db->query('UPDATE orders SET 
                             status = "approved", 
                             agent_id = :agent_id, 
@@ -105,7 +105,26 @@ class Order {
         
         return $this->db->execute();
     }
-    
+    */
+
+    public function approveOrder($order_id, $user_id) {
+        $this->db->query('UPDATE orders SET 
+                            status = "approved",
+                            approval_date = NOW(),
+                            approved_by = :user_id
+                          WHERE id = :order_id AND status = "pending"');
+        
+        $this->db->bind(':order_id', $order_id);
+        $this->db->bind(':user_id', $user_id);
+        
+        if ($this->db->execute()) {
+            // Notificare client că comanda a fost aprobată
+            $this->notifyOrderApproved($order_id);
+            return true;
+        }
+        
+        return false;
+    }
     // Respinge comandă
     public function rejectOrder($order_id, $agent_id, $notes = '') {
         $this->db->query('UPDATE orders SET 
@@ -363,4 +382,37 @@ class Order {
         $result = $this->db->single();
         return $result['count'];
     }
+    public function getOrderItems($order_id) {
+        $this->db->query('SELECT od.*, p.code as product_code 
+                          FROM order_details od 
+                          JOIN products p ON od.product_id = p.id 
+                          WHERE od.order_id = :order_id');
+        
+        $this->db->bind(':order_id', $order_id);
+        
+        return $this->db->resultSet();
+    }
+    public function getOrderClient($order_id) {
+        $this->db->query('SELECT c.* 
+                          FROM orders o
+                          JOIN clients c ON o.client_id = c.id
+                          WHERE o.id = :order_id');
+        
+        $this->db->bind(':order_id', $order_id);
+        
+        return $this->db->single();
+    }
+
+    public function getOrderLocation($order_id) {
+        $this->db->query('SELECT l.* 
+                          FROM orders o
+                          JOIN locations l ON o.location_id = l.id
+                          WHERE o.id = :order_id');
+        
+        $this->db->bind(':order_id', $order_id);
+        
+        return $this->db->single();
+    }
+
+    
 }
